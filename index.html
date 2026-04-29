@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radhika's Portfolio</title>
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;7
+00&display=swap" rel="stylesheet">
+<style>
+:root {
+ --bg-dark: #0a192f;
+ --bg-card: #112240;
+ --blue-primary: #3b82f6;
+ --blue-light: #60a5fa;
+ --text-main: #e6f1ff;
+ --text-dim: #94a3b8;
+ --border-color: #1e3a8a;
+}
+html{
+ scroll-behavior:smooth;
+}
+body {
+ margin: 0;
+ font-family: 'Poppins', sans-serif;
+ background: var(--bg-dark);
+ color: var(--text-main);
+}
+header {
+ position: sticky;
+ top: 0;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px 5%;
+ background: var(--bg-dark);
+ border-bottom: 2px solid var(--border-color);
+ z-index: 1000;
+}
+.logo {
+ font-weight: 700;
+ font-size: 24px;
+ color: var(--blue-light);
+}
+nav {
+ display: flex;
+ gap: 5px;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+nav a {
+ margin-right:10px;
+ background: #1e293b;
+ border: 1px solid var(--blue-primary);
+ border-radius: 12px;
+ padding: 8px 12px;
+ text-decoration: none;
+ font-size: 12px;
+ color: white;
+ transition: 0.3s;
+}
+nav a:hover{
+ background: var(--blue-primary);
+}
+.section{
+ padding:120px 10%;
+ min-height:100vh;
+ scroll-margin-top:80px;
+ border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.section h1{
+ position: relative;
+ display: inline-block;
+ margin-bottom: 20px;
+}
+.section h1::after{
+ content: "";
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ bottom: -5px;
+ width: 100px;
+ height: 1px;
+ background: #3b82f6;
+}
+#home {
+ background-color: #0d2149;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 20px;
+ height: calc(100vh - 62px);
+ margin-top: 62px;
+ padding: 0 10%;
+ scroll-margin-top: 0;
+}
+.hero-content h1{
+ font-size:5rem;
+}
+.hero-content span{
+ color:var(--blue-light);
+}
+.hero-content p{
+ color:var(--text-dim);
+ max-width:500px;
+}
+.hero-image img{
+ width:300px;
+ height:300px;
+ border-radius:50%;
+ border:2px solid #1f4068;
+}
+.about-card{
+ max-width:800px;
+ background:#112240;
+ padding:30px;
+ border-radius:15px;
+ border:1px solid #1f4068;
+}
+.about-card p{
+ color:#ccd6f6;
+ line-height:1.6;
+}
+#skills{
+ background-color: #0d2149;
+}
+#achievements{
+ background-color: #0d2149;
+}
+#contact{
+ background-color: #0d2149;
+ min-height: 100vh + display: flex;
+ flex-direction: column;
+ justify-content: center
+}
+.stats{
+ display:flex;
+ justify-content:space-between;
+ margin-top:20px;
+ flex-wrap:wrap;
+ gap:10px;
+}
+.stat-box{
+ flex:1;
+ min-width:120px;
+ background:#0a192f;
+ padding:15px;
+ text-align:center;
+ border-radius:10px;
+ border:1px solid #1f4068;
+ color:#64ffda;
+ font-weight:bold;
+}
+.stat-box span{
+ display:block;
+ font-size:12px;
+ color:#8892b0;
+}
+.grid-container{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px;
+}
+.grid-card, .project-card, .contact-box{
+ background:var(--bg-card);
+ padding:20px; border-radius:15px;
+ border:1px solid var(--border-color);
+ text-decoration:none;
+ color:inherit;
+ transition:0.3s;
+}
+.grid-card:hover, .project-card:hover{
+ transform:translateY(-5px);
+ border-color:var(--blue-light);
+}
+.contact-box a{
+ color:var(--blue-light);
+ text-decoration:none;
+}
+footer{
+ text-align:center;
+ padding:20px;
+ border-top: 2px solid var(--border-color);
+}
+@media(max-width:768px){
+ #home{
+ flex-direction: column;
+ justify-content: center;
+ text-align: center;
+ height: auto;
+ padding: 100px 5%;
+ }
+ .hero-content h1{
+ font-size: 2rem;
+ }
+ .hero-image img{
+ width: 180px;
+ height: 180px;
+ margin-top: 20px;
+ }
+ header{
+ flex-direction:column;
+ align-items:center;
+ }
+ nav{
+ justify-content:center;
+ gap:5px;
+ }
+ nav a{
+ font-size:10px;
+ padding:6px 8px;
+ }
+ .hero-content h1{
+ font-size:2rem;
+ }
+ .hero-content p{
+ font-size:14px;
+ }
+ .section{
+ padding:100px 5%;
+ }
+ .grid-container{
+ grid-template-columns: 1fr;
+ }
+}</style>
+</head>
+<body>
+<header>
+ <div class="logo">Radhika Jamadar👩💻</div>
+ <nav>
+ <a href="#home">🏠Home</a>
+ <a href="#about">👩💻About</a>
+ <a href="#skills">⚡Skills</a>
+ <a href="#certifications">🏆Certs</a>
+ <a href="#achievements">🏅Achieve</a>
+ <a href="#projects">🚀Projects</a>
+ <a href="#contact">📩Contact</a>
+ </nav>
+</header>
+<!-- HOME -->
+<section class="section" id="home">
+ <div class="hero-content">
+ <h1>Hi, I'm <span>Radhika</span> 👋</h1>
+ <div class="about-card"><p>
+ A First-Year Computer Engineering Student passionate about coding
+and technology.
+ I love building creative projects and learning new skills every
+day.
+ </p>
+ </div>
+ </div>
+ <div class="hero-image">
+ <img src=""C:\Users\anura\Downloads\profile photo.jpg"">
+ </div>
+</section>
+<!-- ABOUT -->
+<section class="section" id="about">
+ <h1>About Me</h1>
+ <div class="about-card">
+<p>Hi! I'm <b>Radhika Devendrasing Jamadar</b>, a first-year Computer
+Engineering student.</p>
+<p>I love coding and building creative projects. I've built a Strong Password Generator using Linux Bash Code, Binary to Decimal code converter(Hardware), and Brainies</p>
+<p>I have certifications from IBM, Cisco, Nasscom and Anthropic.</p>
+<div class="stats">
+<div class="stat-box">3+<br><span>Projects</span></div>
+<div class="stat-box">4+<br><span>Certificates</span></div>
+<div class="stat-box">1st<br><span>Sem</span></div>
+<div class="stat-box">📍<br><span>Dhule</span></div>
+</div>
+</div>
+</section>
+<!-- SKILLS -->
+<section class="section" id="skills">
+ <h1>Skills</h1>
+ <div class="grid-container">
+ <div class="grid-card"><H2>🌐HTML</H2>
+ <p>(Comfortable)</p></div>
+ <div class="grid-card"><H2>🎨CSS</H2>
+ <p>(Learning)</p></div>
+ <div class="grid-card"><H2>🖥️Python</H2>
+ <p>(Learning)</p></div>
+ <div class="grid-card"><H2>💻C programming</H2>
+ <p>(Comfortable)</p></div>
+ <div class="grid-card"><H2>🐧Linux</H2>
+ <p>(Basics)</p></div>
+ </div>
+</section>
+<!-- CERTIFICATIONS -->
+<section class="section" id="certifications">
+ <h1>Certifications</h1>
+ <div class="grid-container">
+    <div>
+       <H2>🖥️Importance of Data Visualization</H2><p>(By IBM)</p><br>
+       
+       <a href="https://drive.google.com/file/d/1z_iEteUhJI1YSs2Xk7rFUG6p2nQBlpb9/view?usp=drivesdk" class="project-card" style="display:inline-block;"><H2>Certificate 1</H2></a>
+       
+     </div> 
+  </div>
+ <div class="grid-container">
+    <div>
+       <H2>🐧Kali Linux</H2><p>(By The linux foundation and Simple learn)</p><br>
+       
+       <a href="https://drive.google.com/file/d/1q2yzipSaI_f4vo4-7F9okcEFCELTCnzK/view?usp=drivesdk" class="project-card" style="display:inline-block;"><H2>Certificate 1</H2></a>
+       <a href="https://drive.google.com/file/d/1kCC6a_kYrloyQuRgmsAvCppa1qfF0FsP/view?usp=drivesdk" class="project-card" style="display:inline-block;"><H2>Certificate 2</H2></a>
+     </div>  
+ </div>
+ <div class="grid-container">
+    <div>  
+      <H2>🖥️Python Essentials</H2><p>(By Cisco)</p><br>
+      <a href="https://drive.google.com/file/d/1Mx6yBiNGK1z2x7fv46ocwAb3xpzWd6KH/view?usp=drivesdk" class="project-card" style="display:inline-block;"><h2>Certificate 1</h2></a>
+      <a href="https://drive.google.com/file/d/15mjRQ18KBOW-djFc-0F2ep9zU2RcAIzi/view?usp=drivesdk" class="project-card" style="display:inline-block;"><h2>Certificate 2</h2></a>
+    </div>
+</div>
+<div class="grid-container">
+    <div>
+      <H2>🌐AI course</H2><p>(By Anthropic)</p><br>
+      <a href="https://drive.google.com/file/d/1iFApEGabN7Sioz_cbenNyb4F1zJJviWq/view?usp=drivesdk" class="project-card" style="display:inline-block;"><H2>Claude 101</H2></a>
+      <a href="https://drive.google.com/file/d/1LiU7IEbErMRyrJcjArOhftX412z0AESI/view?usp=drivesdk" class="project-card" style="display:inline-block;"><H2>AI Fluency: Framework and Foundations</H2></a><br>
+      <a href="https://drive.google.com/file/d/1948bPCOooRoaD9HvSMXbbiq-L1-i4fvE/view?usp=drivesdk" class="project-card" style="display:inline-block;"><H2>AI Fluency for students</H2></a>
+      <a href="https://drive.google.com/file/d/1xkW6zQYn4vRsmKqxWZhC3Hc1yiBdngq4/view?usp=drivesdk" class="project-card" style="display:inline-block;"><H2>AI Fluency for nonprofits</H2></a>
+    </div>
+ </div>
+</section>
+<section class="section" id="achievements">
+<h1>Achievements</h1>
+<div class="grid-container">
+<a href="https://drive.google.com/file/d/1Cfo0aqUSxzb3uayxSsNXjMLYOqXOcSk3/view?usp=drivesdk" target="_blank" class="project-card">
+<H2>🎖️CET exam result</H2>
+</a>
+<a href="https://drive.google.com/file/d/1KpTyH_rDRvq3_wEQl_HxWU0r9M-2XvHz/view?usp=drivesdk" target="_blank" class="project-card">
+<H2>📑1st Sem marksheet</H2>
+</a>
+
+<a href="https://drive.google.com/file/d/1IYa7hSep0evFbotKv-kkumMF8ziP1kfI/view?usp=drivesdk" target="_blank" class="project-card">
+<H2>📑Datathon Participation Certificate</H2>
+</a>
+</div>
+</section>
+<!-- PROJECTS -->
+<section class="section" id="projects">
+ <h1>Projects</h1>
+ <div class="grid-container">
+ <a href="https://drive.google.com/file/d/1XC5mj8VZ9jIDESZ7Ndj6C1eANiIPJS9A/view?usp=drivesdk" class="project-card">
+<H2>🏨</H2><h2>Strong Password Generator</h2>
+<p>A Strong Password Generator using linux bash code.This consist of 4 types of password .First one is Numeric, Second is Alphanumeric, Third is Alphanumeric and also with special characters and the last one was strongest password than all three.</p>
+</a>
+<a href="https://drive.google.com/file/d/17oiwJw6w-cKbPax758HXuXeCp1Irqiji/view?usp=drivesdk" target="_blank" class="project-card">
+<H2>🔢</H2> <h2>Binary to Decimal Code Converter</h2>
+<p>This was Hardware Project which takes Binary input from the user through 4 way dip switch and convert it into Decimal Number(0 to 9) as an output displayed through 7 segment anode display.</p>
+</a>
+<a href="https://drive.google.com/file/d/1s0lDjza854C7jmSxUezSwO_tspYKngcx/view?usp=drivesdk" target="_blank" class="project-card">
+<H2>📚👩🎓</H2> <h2>Brainies</h2>
+<p>Designed an accessibility-first e-learning platform with text-to-speech, high-contrast UI, and adaptive content. Enabled personalized font and reading adjustments for multiple disability profiles, supporting independent navigation. Built a WCAG-inspired, low-cognitive-load interface for self-paced learning.</p>
+</a>
+
+<a href="https://drive.google.com/file/d/1PzmRfWIPwBB3xC0vQwK-FapP15HnR8Ea/view?usp=drivesdk" target="_blank" class="project-card">
+<H2>📚👩🎓</H2> <h2>EV Charging Infrastructure and Market Analysis</h2>
+<p>This project analyzes a global EV dataset using Tableau to identify trends in adoption, revenue, and infrastructure. It highlights key insights on market growth, environmental impact, and station utilization through interactive dashboards and visualizations.</p>
+</a>
+
+ </div>
+</section>
+<!-- CONTACT -->
+<section class="section" id="contact">
+ <h1>Contact</h1>
+ <div class="grid-container">
+ <div class="contact-box">
+ <H2>📞Phone</H2>
+ <a href="tel:+91 9699147054">Call Me</a>
+ </div>
+ <div class="contact-box">
+ <H2>📩Email</H2>
+ <a href="mailto:radhikajamadar2908@gmail.com">Send Mail</a>
+ </div>
+ <div class="contact-box">
+ <H2>🧩GitHub</H2>
+ <a href="https://github.com/gayatridevalekar19-
+jpg">Profile</a>
+ </div>
+ <div class="contact-box">
+ <H2>💻LinkedIn</H2>
+ <a
+href="https://www.linkedin.com/in/radhika-jamadar-878b15386?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Profile</a>
+ </div>
+ </div>
+</section>
+<footer>© 2026 Radhika Jamadar |All rights reserved</footer>
+</body>
+</html>
